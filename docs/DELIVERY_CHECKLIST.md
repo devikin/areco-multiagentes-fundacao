@@ -8,17 +8,17 @@
 - [x] Continuidade do frontend: 8/8; alternância de domínios: 4/4; continuidade financeira: 3/3.
 - [x] Saudação natural: 4/4 com GPT-4.1 mini real + inspeção manual no frontend (v0.2.32).
 
-## Pendente na v0.2.34
+## Verificações finais — estado de 22/10/2026
 
-- [ ] Instalar patch, reconstruir container e verificar `healthy`.
-- [ ] Executar `python -m pytest -q` com o projeto completo.
-- [ ] Inspecionar frontend após atualização: sucesso normal, erro 503, timeout e pergunta restaurada sem retry automático.
-- [ ] Confirmar HTML e FastAPI exibem a mesma versão v0.2.34; atualizar a página com Ctrl+F5.
-- [ ] Validar consulta sem dados sensíveis após o patch. Não é necessário repetir toda a bateria paga sem regressão.
-- [ ] Auditar `git status`, `.gitignore`, `.dockerignore`, arquivos `.env`, banco runtime, logs e histórico de commits.
-- [ ] Registrar `pip freeze` do Python usado na validação e revisar resolução de dependências; não trocar por versões inventadas.
-- [ ] Conferir que a documentação, scripts usados e as evidências têm nomes e caminhos existentes no pacote.
-- [ ] Decidir se o repositório deve permanecer privado e confirmar autorização para compartilhar bases fictícias recebidas.
+- [x] Testes completos no Windows: **137 passed in 6.74s**, `python -m pytest -q` (saída compartilhada pelo candidato).
+- [x] Git inicializado, commit criado e `main` publicada no GitHub.
+- [x] Repositório `devikin/areco-multiagentes-fundacao` confirmado como **private** pela API GitHub.
+- [x] `.env` ignorado localmente e ausente da branch principal remota; `.env.example` contém chave vazia.
+- [x] Os arquivos essenciais do backend, frontend, testes, Docker e avaliação oficial foram localizados no GitHub.
+- [x] A reconexão v0.2.35 foi validada manualmente no navegador com captura anexada.
+- [ ] Confirmar qual canal de entrega a Areco aceita e compartilhar apenas com avaliadores autorizados (convite GitHub ou arquivo compactado).
+- [ ] Confirmar autorização para compartilhamento do pacote sintético recebido, mantendo-o em repositório privado até lá.
+- [ ] Se for exigida reprodução estrita, registrar as versões instaladas do Python/SDK e verificar um build novo; `requirements.txt` contém intervalos.
 
 ## Demonstração recomendada (3 minutos)
 
@@ -31,13 +31,6 @@
 **Limite:** demonstração local sem autenticação; nunca exponha a PoC diretamente na internet. Timeout no browser não comprova que a execução foi cancelada no servidor.
 
 
-## Validação de falha de rede — v0.2.34
-- [ ] Com a aba aberta, parar container e enviar pergunta: texto permanece visível no campo.
-- [ ] Tentar enviar novamente ainda sem servidor: texto continua visível, sem retry automático.
-- [ ] Iniciar o container e clicar Enviar manualmente: resposta confirmada limpa o campo.
-- [ ] Recarregar página inicia sessão nova, sem recuperação automática de histórico/resposta; comportamento documentado.
-
-
 ## v0.2.35 — Reconexão antes do envio
 
 - [x] Testes locais da lógica de reconexão (sem OpenAI): servidor online, espera offline, cancelamento e POST incerto.
@@ -45,7 +38,7 @@
 - [ ] Se necessário para auditoria de entrega, confirmar nos logs que a reconexão causou **somente um POST**; a captura não comprova essa quantidade.
 - [ ] Testar Cancelar espera sem POST automático, com pergunta preservada no input.
 - [ ] Confirmar que falha de POST já iniciado **não** produz reenvio automático.
-- [ ] Executar `python -m pytest -q` no projeto completo e revisar saída antes da entrega.
+- [x] Executar `python -m pytest -q` no projeto completo: **137 passed in 6.74s** em 22/10/2026.
 
 **Limitação deliberada:** fila por aba, sem persistência após reload e sem recuperação de histórico após reinício do backend.
 
@@ -55,4 +48,8 @@
 - [x] Print original anexado em `docs/assets/reconexao_backend_offline_v0.2.35.png`.
 - [x] Procedimento e limites documentados em `docs/EVIDENCIA_RECONECTAR_BACKEND_v0.2.35.md`.
 - [x] Teste manual de reconexão aprovado pelo candidato.
-- [ ] Reexecutar o pytest final no Windows e auditar o estado real do repositório Git antes da publicação.
+- [x] Pytest concluído no Windows e repositório privado/branch principal verificados após publicação.
+
+### Observação de evidências
+
+As 137 aprovações são de testes locais/offline (não equivalem a 137 chamadas reais ao SDK). A quantidade exata de POSTs após reconexão e os cenários de cancelamento/queda durante POST não foram comprovados por logs enviados nesta conversa; manter essas verificações separadas.

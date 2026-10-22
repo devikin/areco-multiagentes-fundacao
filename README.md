@@ -18,7 +18,7 @@ Requer Docker Desktop com Docker Compose v2, acesso à internet e uma chave Open
 
 ```powershell
 # Se ainda não houver um arquivo .env, crie a partir do exemplo.
-Copy-Item .env.example .env
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 notepad .env
 # Preencha OPENAI_API_KEY; NÃO versione o .env.
 docker compose up --build -d
@@ -67,7 +67,7 @@ Os comandos acima não precisam fazer chamadas à OpenAI; o teste de UI verifica
 | Esclarecimento financeiro (v0.2.31) | 3/3 PASS | relatório gerado pelo script `--scenario finance` em `docs/evidence/` |
 | Saudação natural (v0.2.32) | 4/4 PASS + frontend verificado manualmente | `docs/evidence/greeting_20261022T142616Z.json` |
 
-Não confundir avaliações pontuais aprovadas com garantia de segurança ou confiabilidade universal. Testes de conversação com OpenAI real **consomem tokens**. A v0.2.35 precisa ser validada no Docker após aplicar o patch; seus agentes e ferramentas não foram alterados.
+Não confundir avaliações pontuais aprovadas com garantia de segurança ou confiabilidade universal. Testes de conversação com OpenAI real **consomem tokens**. **Em 22/10/2026, o candidato confirmou a reconexão da v0.2.35 no Docker/Windows e executou `python -m pytest -q`: 137 passed em 6,74 s.** A captura de tela comprova o estado visual de reconexão, não a contagem de requisições HTTP. Os agentes e as ferramentas não foram alterados na v0.2.35. Consulte [validação da entrega](docs/RELEASE_VALIDATION_v0.2.35.md).
 
 ## Comportamento conversacional e limites
 
@@ -111,6 +111,7 @@ git ls-files --others --exclude-standard
 - `docs/EVIDENCIA_RECONECTAR_BACKEND_v0.2.35.md`: print do overlay e documentação do tratamento de indisponibilidade do backend.
 - `docs/ARCHITECTURE.md`: arquitetura vigente.
 - `docs/DELIVERY_CHECKLIST.md`: critérios de verificação e envio.
+- `docs/RELEASE_VALIDATION_v0.2.35.md`: publicação GitHub, testes confirmados e pendências finais.
 - `docs/DEVELOPMENT_LOG.md`, `docs/DECISIONS.md`: diário cronológico e decisões.
 - `docs/EVALUATION_RESULTS_v0.2.13.md`: avaliação oficial histórica.
 - `docs/ROADMAP.md`: melhorias futuras que não foram implementadas.
