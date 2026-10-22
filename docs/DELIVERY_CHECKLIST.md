@@ -1,55 +1,43 @@
-# Checklist final — entrega Areco v0.2.35
+# Checklist final de entrega — Areco v0.2.35
 
-## Já confirmado pelo candidato
+> Esta é a visão **atual** de entrega. Pendências de versões intermediárias são históricas e permanecem nos diários/commits, não como tarefas ainda abertas. As validações se referem às evidências fornecidas pelo candidato, incluindo execução independente em clone limpo no Windows em 22/10/2026; não são garantia universal de reprodução.
 
-- [x] Agents SDK como motor único, 1 Orquestrador e 3 especialistas.
-- [x] Docker executou no Windows com container healthy e backend FastAPI acessível.
-- [x] Suíte oficial: 12 casos aprovados após revisão humana dos 2 REVIEW.
-- [x] Continuidade do frontend: 8/8; alternância de domínios: 4/4; continuidade financeira: 3/3.
-- [x] Saudação natural: 4/4 com GPT-4.1 mini real + inspeção manual no frontend (v0.2.32).
+## Confirmado
 
-## Verificações finais — estado de 22/10/2026
+- [x] Backend FastAPI, frontend HTML/CSS/JS e OpenAI Agents SDK como motor único com Orquestrador e três especialistas.
+- [x] Bases sintéticas importadas para SQLite; consultas SQL parametrizadas, `Decimal` e recuperação documental BM25 com fontes.
+- [x] Docker/Windows executado pelo candidato com container `healthy` e testes HTTP reais dos três domínios.
+- [x] Avaliação oficial v0.2.27: 10 PASS automáticos, 2 REVIEW posteriormente analisados/aceitos manualmente (12/12); os relatórios brutos preservam sua classificação original.
+- [x] Continuidade frontend v0.2.31: 8/8; alternância de domínios: 4/4; esclarecimentos financeiros: 3/3; saudação natural v0.2.32: 4/4.
+- [x] Reconexão v0.2.35 validada manualmente no navegador, com imagem e procedimento. Testes automatizados da lógica também presentes.
+- [x] Suíte Pytest completa executada pelo candidato em Windows: **137 passed in 6.74s**.
+- [x] Git inicializado, `.env` ignorado e ausente no GitHub; commit inicial publicado no repositório **privado** `devikin/areco-multiagentes-fundacao` (branch `main`).
+- [x] Estrutura de rastreabilidade: `request_id`, `trace_id`, fontes, handoffs, ferramentas e tokens em resposta/logs.
+- [x] Anotações pessoais transcritas em 22/10/2026 e vinculadas cronologicamente aos registros técnicos (sem inventar datas de cada decisão).
+- [x] Índice de uso da IA e instruções do agente organizados para revisão dos avaliadores.
 
-- [x] Testes completos no Windows: **137 passed in 6.74s**, `python -m pytest -q` (saída compartilhada pelo candidato).
-- [x] Git inicializado, commit criado e `main` publicada no GitHub.
-- [x] Repositório `devikin/areco-multiagentes-fundacao` confirmado como **private** pela API GitHub.
-- [x] `.env` ignorado localmente e ausente da branch principal remota; `.env.example` contém chave vazia.
-- [x] Os arquivos essenciais do backend, frontend, testes, Docker e avaliação oficial foram localizados no GitHub.
-- [x] A reconexão v0.2.35 foi validada manualmente no navegador com captura anexada.
-- [ ] Confirmar qual canal de entrega a Areco aceita e compartilhar apenas com avaliadores autorizados (convite GitHub ou arquivo compactado).
-- [ ] Confirmar autorização para compartilhamento do pacote sintético recebido, mantendo-o em repositório privado até lá.
-- [ ] Se for exigida reprodução estrita, registrar as versões instaladas do Python/SDK e verificar um build novo; `requirements.txt` contém intervalos.
+## Ainda precisa de confirmação antes de entregar
 
-## Demonstração recomendada (3 minutos)
+- [x] **Clone limpo (22/10/2026):** execução independente no Windows/Docker validada pelo candidato, container `healthy`, `/health` com três agentes SDK e consultas pelo chat às três bases; detalhes em `docs/CLONE_VALIDATION.md`.
+- [ ] **Reprodutibilidade:** identificar e validar resolução das versões de dependências num build novo; `requirements.txt` tem intervalos amplos, sem arquivo lock. Não inventar versões nem prometer instalação idêntica em todos os ambientes.
+- [ ] **Rastreabilidade conversacional:** obter a exportação ZIP da sessão, selecionar o chat correto, conferir dados antes de publicar e produzir referência legível em `docs/ai_interactions/`.
+- [ ] **Evidências específicas:** se a avaliação exigir confirmação empírica de um único POST após reconexão, verificar logs/DevTools; screenshot não prova a quantidade de requisições.
+- [ ] **Compartilhamento:** confirmar se as bases fictícias podem ser compartilhadas e definir como conceder acesso à Areco ao repo privado ou fornecer pacote aprovado.
+- [ ] **Versão final:** revisar `git diff`, validar caminhos/links e ausência de segredos, realizar último commit e **somente então** criar/publicar a tag anotada `v0.2.35`.
 
-1. `docker compose up --build -d` e `docker compose ps`.
-2. Abrir http://127.0.0.1:8000/ e mostrar três domínios.
-3. Exibir uma consulta à Ouvidoria `OUV-0016` com fonte e trace.
-4. Mostrar resposta sobre política de férias e orçamento por departamento.
-5. Apresentar README, arquitetura e resultados reais de teste.
+## Demonstração recomendada (3–5 minutos)
 
-**Limite:** demonstração local sem autenticação; nunca exponha a PoC diretamente na internet. Timeout no browser não comprova que a execução foi cancelada no servidor.
+1. Mostrar execução no Docker e `/health`.
+2. Realizar uma pergunta em Financeiro (montante/orçamento com período), uma sobre política interna e outra sobre protocolo `OUV-0016`.
+3. Mostrar `request_id`, `trace_id`, handoffs, ferramentas e fontes; explicar que o modelo decide o direcionamento e ferramentas garantem o dado recuperado.
+4. Abrir `docs/AI_USAGE.md` → `docs/DECISOES_PESSOAIS.md` → diário técnico → ADRs → testes; mostrar ao menos um bug encontrado e corrigido com auxílio de IA.
+5. Expor honestamente limites: aplicação local sem autenticação; estado de conversa volátil; sem idempotência de POST já iniciado.
 
+## Documentos principais
 
-## v0.2.35 — Reconexão antes do envio
-
-- [x] Testes locais da lógica de reconexão (sem OpenAI): servidor online, espera offline, cancelamento e POST incerto.
-- [x] Candidato validou manualmente o fluxo de reconexão no frontend com captura visual do overlay/blur em 22/10/2026. Evidência: `docs/EVIDENCIA_RECONECTAR_BACKEND_v0.2.35.md`.
-- [ ] Se necessário para auditoria de entrega, confirmar nos logs que a reconexão causou **somente um POST**; a captura não comprova essa quantidade.
-- [ ] Testar Cancelar espera sem POST automático, com pergunta preservada no input.
-- [ ] Confirmar que falha de POST já iniciado **não** produz reenvio automático.
-- [x] Executar `python -m pytest -q` no projeto completo: **137 passed in 6.74s** em 22/10/2026.
-
-**Limitação deliberada:** fila por aba, sem persistência após reload e sem recuperação de histórico após reinício do backend.
-
-
-### Registro visual de validação — 22/10/2026
-
-- [x] Print original anexado em `docs/assets/reconexao_backend_offline_v0.2.35.png`.
-- [x] Procedimento e limites documentados em `docs/EVIDENCIA_RECONECTAR_BACKEND_v0.2.35.md`.
-- [x] Teste manual de reconexão aprovado pelo candidato.
-- [x] Pytest concluído no Windows e repositório privado/branch principal verificados após publicação.
-
-### Observação de evidências
-
-As 137 aprovações são de testes locais/offline (não equivalem a 137 chamadas reais ao SDK). A quantidade exata de POSTs após reconexão e os cenários de cancelamento/queda durante POST não foram comprovados por logs enviados nesta conversa; manter essas verificações separadas.
+- Entrada de avaliadores: [`../README.md`](../README.md)
+- Instruções atuais do agente: [`../AGENTS.md`](../AGENTS.md)
+- Decisões do candidato: [`DECISOES_PESSOAIS.md`](DECISOES_PESSOAIS.md)
+- Uso responsável da IA: [`AI_USAGE.md`](AI_USAGE.md)
+- Diário e decisões: [`DEVELOPMENT_LOG.md`](DEVELOPMENT_LOG.md), [`DECISIONS.md`](DECISIONS.md)
+- Validação e clone: [`RELEASE_VALIDATION_v0.2.35.md`](RELEASE_VALIDATION_v0.2.35.md), [`CLONE_VALIDATION.md`](CLONE_VALIDATION.md)

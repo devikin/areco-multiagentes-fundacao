@@ -270,3 +270,23 @@
 - **Limite probatório:** a imagem comprova a renderização do estado de desconexão, não a contagem exata de POSTs nem a persistência de memória entre reinícios.
 - **Código:** nenhuma alteração funcional nos agentes, frontend ou API nesta atualização exclusivamente documental.
 - **Próximo passo:** validar o pytest completo no Windows, conferir o índice/histórico Git e não incluir `.env` nem artefatos de runtime na entrega.
+
+
+## Entrada — 22/10/2026 — Revisão de entrega, registros pessoais e GitHub
+
+- **Relato humano retrospectivo:** o candidato transcreveu 12 anotações pessoais desde o planejamento do desafio até a reconexão v0.2.35. Estão organizadas cronologicamente por fase técnica em `docs/DECISOES_PESSOAIS.md`, com vínculos a registros existentes; não são transcrições literais nem novas datas inventadas.
+- **Processo assistido por IA:** criado índice em `docs/AI_USAGE.md` com casos concretos de análise de logs, revisão de escolha de ferramentas, melhoria de recuperação textual, redesenho da divisão backend–LLM e resiliência da interface.
+- **Verificação real informada pelo candidato:** `python -m pytest -q` no Windows => **137 passed in 6.74s**, após ajustar coleta de testes históricos e isolamento de mocks; não houve alteração funcional dos agentes por causa dessa correção.
+- **GitHub remoto efetivamente consultado:** repositório `devikin/areco-multiagentes-fundacao`, privado, branch `main`, com commit inicial, código, README e evidências. `.env` não presente no repositório; `.env.example` não contém chave.
+- **Pendências declaradas:** clone limpo/Docker de instalação independente; incorporar e revisar exportação do chat; confirmação de acesso/autorização de distribuição dos anexos; último commit e tag final v0.2.35.
+- **Estado do código nesta revisão:** nenhuma alteração funcional; reorganização exclusivamente documental.
+
+## Validação real observada — 22/10/2026
+
+- **Critério de aceite da Areco:** instalar e operar a aplicação a partir das instruções fornecidas no repositório.
+- **Procedimento humano:** clone do GitHub privado para `%TEMP%\areco-clone-auditoria-v035`, separado da pasta de desenvolvimento; criação de `.env` local, execução `docker compose -p areco_clone_validation up --build -d` e teste HTTP.
+- **Evidência de infraestrutura:** saída `docker compose -p areco_clone_validation ps` exibiu `areco_clone_validation-app-1` como `Up ... (healthy)`, porta `127.0.0.1:8000->8000/tcp`.
+- **Evidência do backend:** `GET /health` retornou `status=ok`, `engine=sdk` e três agentes (`financeiro`, `informacoes_internas`, `ouvidoria`).
+- **Avaliação manual:** o candidato declarou ter usado o chat e consultado satisfatoriamente as três bases de conhecimento. Não foram fornecidos os textos das respostas nem IDs dos traces desta etapa.
+- **Conclusão delimitada:** reprodução aprovada em clone limpo no Windows/Docker, sem correções adicionais reportadas. Não afirmar validação em outros sistemas, cobertura universal da LLM ou equivalência exata de versões de dependências.
+- **Próxima pendência:** selecionar/organizar a exportação da conversa e concluir a revisão documental antes do último commit e tag `v0.2.35`.

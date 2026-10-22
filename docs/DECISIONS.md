@@ -111,7 +111,7 @@
 - **Alternativa rejeitada:** respostas pré-programadas, regex de roteamento no backend e bloqueio integral de qualquer pergunta que mencione 'ignore'.
 - **Validação:** testes offline e self-test do avaliador; execução GPT-4.1 mini real no Docker pendente.
 
-## ADR-0015 — Pendência de esclarecimento versus falta de evidências (v0.2.31)
+## ADR-0016 — Pendência de esclarecimento versus falta de evidências (v0.2.31)
 - **Problema observado:** `pending_agent` era mantido para qualquer especialista que não retornasse fontes; isso prendia códigos OUV recebidos posteriormente em Informações Internas.
 - **Decisão:** preservar a pendência apenas no Financeiro para parâmetros confirmáveis (ex.: ano), e permitir que o Orquestrador reavalie mensagens seguintes de outros especialistas. Reconhecer código formal OUV somente como guarda de reentrada ao Orquestrador, nunca como resposta ou SQL local.
 - **Alternativa evitada:** introduzir um segundo classificador semântico em Python ou respostas hard-coded.
@@ -145,3 +145,8 @@
 - **Implementação:** checagem de `/health` antes do POST; caso offline, uma mensagem pendente em memória por aba, modal com spinner e cancelamento, polling de 3 segundos e envio único depois do retorno da API. Nenhuma mudança em backend ou Agents SDK além da string de versão.
 - **Proibição:** nunca reenviar automaticamente solicitações após iniciar um POST cuja conclusão ficou incerta; idempotência/persistência end-to-end fica para possível evolução futura.
 - **Verificação:** testes locais sem API; Docker/Windows ainda pendente após instalar o patch.
+
+
+## Nota documental — 22/10/2026 — Relatos humanos consolidados
+
+O candidato transcreveu retrospectivamente 12 observações pessoais sobre a construção do projeto. Foram organizadas por fase em [`DECISOES_PESSOAIS.md`](DECISOES_PESSOAIS.md), com correspondência à versão e à evidência técnica quando disponível. Essa transcrição não altera o histórico factual dos ADRs nem os transforma em prompts literais. Consulte [`AI_USAGE.md`](AI_USAGE.md) para diferenciar intervenção humana, proposta da IA, implementação e teste.

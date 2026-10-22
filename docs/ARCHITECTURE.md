@@ -1,4 +1,4 @@
-# Arquitetura vigente — Areco v0.2.34
+# Arquitetura vigente — Areco v0.2.35
 
 A v0.2.33 altera **somente confiabilidade do frontend, versões exibidas e documentação**. Agentes, ferramentas, regras de negócio, memória e FastAPI mantêm o comportamento da v0.2.32.
 
@@ -64,3 +64,12 @@ A interface mantém a última pergunta no campo de texto enquanto espera pela AP
 ### Evidência visual da indisponibilidade do backend (v0.2.35)
 
 A captura de tela do overlay com blur, animação de reconexão e opção **Cancelar espera** está registrada em [EVIDENCIA_RECONECTAR_BACKEND_v0.2.35.md](EVIDENCIA_RECONECTAR_BACKEND_v0.2.35.md), com o arquivo original em `docs/assets/reconexao_backend_offline_v0.2.35.png`. O candidato confirmou a validação manual do cenário em 22/10/2026. A captura demonstra o estado visual offline, não a quantidade de POSTs processados.
+
+
+## Estado de validação e documentação para a entrega (22/10/2026)
+
+- A reconexão v0.2.35 foi validada manualmente no Docker/Windows pelo candidato. A imagem comprova o estado visual, **não** o número de POSTs.
+- Pytest completo no Windows: **137 passed em 6,74 s** (relato e saída fornecidos pelo candidato).
+- Handoffs e respostas GPT-4.1 mini reais foram exercitados nas versões anteriores, com fontes e traces registrados em `docs/evidence/`.
+- A instalação do zero em clone independente foi **validada pelo candidato no Windows/Docker em 22/10/2026**: container `healthy`, `/health` com os três agentes SDK e consultas pelo chat às três bases. Detalhes e limites em `docs/CLONE_VALIDATION.md`.
+- A divisão humano–IA, as 12 anotações pessoais e a orientação de auditoria constam em `docs/AI_USAGE.md` e `docs/DECISOES_PESSOAIS.md`.

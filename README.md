@@ -1,6 +1,30 @@
 # Areco — Assistente Multiagente (OpenAI Agents SDK)
 
+<!-- ARECO_TRANSCRICOES_ORIGINAIS_INICIO -->
+## Conversa integral de desenvolvimento com IA — exportações originais
+
+Os dois arquivos abaixo foram exportados pelo candidato em **22/10/2026** (Markdown às 16:38 e texto às 16:39). Ambos foram preservados **byte a byte**, sem cortes, correções ou reorganização. Representam dois formatos da **mesma sessão até o momento da exportação**, não duas conversas diferentes.
+
+- **[Consultar a conversa integral em Markdown](docs/ai_interactions/ChatGPT-Branch%20%C2%B7%20Planejamento%20Multiagentes%20de%20IA-20261022-1638.md)** — mais adequada para leitura no GitHub.
+- **[Consultar a conversa integral em TXT](docs/ai_interactions/ChatGPT-Branch%20%C2%B7%20Planejamento%20Multiagentes%20de%20IA-20261022-1639.txt)** — versão de texto simples.
+
+As observações pessoais organizadas cronologicamente estão em [Decisões pessoais](docs/DECISOES_PESSOAIS.md). A orientação de auditoria e os hashes SHA-256 das transcrições estão no [índice das interações com IA](docs/ai_interactions/README.md). Referências a imagens e anexos externos presentes na exportação não são arquivos incorporados a essas transcrições.
+<!-- ARECO_TRANSCRICOES_ORIGINAIS_FIM -->
+
 **Versão candidata à entrega: v0.2.35 (reconexão segura antes do envio).** O comportamento dos agentes é o mesmo da **v0.2.32**, validada pelo candidato no Windows/Docker com a OpenAI real. Esta é uma prova de conceito com **dados sintéticos**, não um serviço de produção.
+
+## Para os avaliadores: onde encontrar o processo e as anotações
+
+**Comece por este roteiro:**
+
+1. **[Anotações pessoais do candidato, em sequência cronológica](docs/DECISOES_PESSOAIS.md):** observações, testes manuais e decisões narradas pelo candidato, relacionadas a cada fase do projeto.
+2. **[Como a IA participou do desenvolvimento](docs/AI_USAGE.md):** divisão de responsabilidades, casos de depuração, alternativas e validações.
+3. **[Diário técnico cronológico](docs/DEVELOPMENT_LOG.md)** e **[decisões arquiteturais](docs/DECISIONS.md):** evolução, falhas, correções e trade-offs, incluindo decisões descartadas.
+4. **[AGENTS.md](AGENTS.md):** regras para o agente e registro contínuo do desenvolvimento; **[histórico anterior das instruções](docs/AGENTS_HISTORY.md)**.
+5. **[Prompt inicial e conversas com a IA](docs/ai_interactions/README.md):** prompt inicial e índice das duas transcrições integrais, preservadas sem edição.
+6. **[Arquitetura](docs/ARCHITECTURE.md)**, **[evidências dos testes](docs/RELEASE_VALIDATION_v0.2.35.md)**, **[checklist](docs/DELIVERY_CHECKLIST.md)** e **[clone limpo](docs/CLONE_VALIDATION.md)**.
+
+O relato pessoal foi transcrito retrospectivamente em 22/10/2026; não é uma conversa literal. Os testes automatizados não substituem avaliações humanas. A PoC utiliza dados sintéticos e **não deve ser publicada como serviço aberto na internet**.
 
 ## Visão geral
 
@@ -11,6 +35,17 @@
 - **Ouvidoria:** `buscar_protocolo`, `consultar_manifestacoes` e `listar_status_ouvidoria`; protocolos `OUV-NNNN` são consultados na base estruturada.
 - **Frontend:** HTML, CSS e JavaScript; sessão distinta por aba, mensagens exibidas como texto, sem renderizar HTML ou Markdown recebido do modelo.
 - **Modelo:** `gpt-4.1-mini` no `.env.example` e como padrão do backend; `OPENAI_MODEL` pode ser alterado. Consultas reais à API OpenAI consomem tokens.
+
+### Primeira instalação a partir do repositório privado
+
+Com o Git configurado e permissão para acessar o repositório:
+
+```powershell
+git clone https://github.com/devikin/areco-multiagentes-fundacao.git
+Set-Location .\areco-multiagentes-fundacao
+```
+
+Depois siga as instruções de Docker abaixo. O avaliador precisa criar seu **próprio** `.env` com chave OpenAI válida; nenhuma chave está incluída no Git. O procedimento de instalação independente foi **executado e validado em clone limpo no Windows/Docker em 22/10/2026**; veja evidências e limites em [CLONE_VALIDATION.md](docs/CLONE_VALIDATION.md).
 
 ## Como executar — Docker (recomendado)
 
