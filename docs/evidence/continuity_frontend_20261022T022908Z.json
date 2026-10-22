@@ -1,0 +1,132 @@
+{
+  "suite": "continuity_frontend",
+  "version": "0.2.31",
+  "created_at": "2026-10-22T02:28:54.290439+00:00",
+  "results": [
+    {
+      "id": "F01",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "com vai vc?",
+      "answer": "Olá, como posso te ajudar hoje?",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_675b6137ce5e44698f7c86dcdb404a51",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F02",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "tenho duvidas",
+      "answer": "Pode me falar sobre quais dúvidas você tem? Estou aqui para ajudar.",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_22bdf4dd07d04fdd87c90d9e4404bf09",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F03",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "gostaria de saber a situacao de um protocolo",
+      "answer": "Por favor, informe o código do protocolo no formato OUV-NNNN para que eu possa consultar a situação para você.",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_4184e7bb4f4d431cb94b38251e82b787",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F04",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "eu nao tenho o numero",
+      "answer": "Sem o número do protocolo no formato OUV-NNNN, não consigo localizar a manifestação específica. Se tiver qualquer outra informação ou dúvida, fico à disposição para ajudar.",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_eb0a73234604436aa9ec187fb2732602",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F05",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "reembolso",
+      "answer": "Encontrei algumas manifestações recentes sobre reembolso, mas para informar a situação exata de alguma delas, preciso que você me informe o número do protocolo OUV-NNNN. Você tem o número de algum protocolo específico de reembolso que deseja consultar?",
+      "domain": "ouvidoria",
+      "sources": [
+        {
+          "source": "manifestacoes.csv",
+          "detail": "23 registros; consulta listar"
+        }
+      ],
+      "tools_used": [
+        "consultar_manifestacoes"
+      ],
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "trace_id": "trace_a42967e321074ce989ed97f8b11fbe63",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F06",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "OUV-0016",
+      "answer": "O protocolo OUV-0016, da categoria Reembolso, está com status \"Aguardando área responsável\". A área responsável por esta manifestação é o Financeiro, e a prioridade é média. Se precisar de mais alguma informação, estou à disposição.",
+      "domain": "ouvidoria",
+      "sources": [
+        {
+          "source": "manifestacoes.csv",
+          "detail": "OUV-0016"
+        }
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "trace_id": "trace_03787fe03d254cdb9ea6f667bed92d49",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F07",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "n localizou o protocolo OUV-0016?",
+      "answer": "Localizei sim o protocolo OUV-0016. Ele está com status \"Aguardando área responsável\", na categoria Reembolso, com prioridade média, e a área responsável é o Financeiro. Posso ajudar em mais alguma coisa?",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_ec148a8318254c43b3691ee91e7fff20",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "F08",
+      "session_id": "783712f9-7d86-4e19-9458-c3ce66b1532f",
+      "question": "e qual e a prioridade dele?",
+      "answer": "A prioridade do protocolo OUV-0016 é média. Posso te ajudar com mais alguma informação?",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_37d349113a3b4383a427b7b36e200c1a",
+      "errors": [],
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "PASS": 8
+  }
+}

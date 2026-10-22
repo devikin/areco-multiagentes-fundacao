@@ -1,0 +1,327 @@
+{
+  "suite": "official",
+  "created_at": "2026-10-20T23:08:29.514117+00:00",
+  "tests_requested": 12,
+  "results": [
+    {
+      "id": "T001",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "01_politica_ferias.md",
+        "08_faq_rh.md"
+      ],
+      "trace_id": "trace_f2ff0ed1f30d401e912614fd56827882",
+      "latency_ms": 4336,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1515,
+        "output_tokens": 170,
+        "total_tokens": 1685
+      },
+      "answer_sha256": "4b882099724afea31af508167ea52bcaeae8da52d00ec27f39db5950bf41b735"
+    },
+    {
+      "id": "T002",
+      "status": "FAIL",
+      "errors": [
+        "termo esperado ausente da resposta: comprovante"
+      ],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "02_politica_reembolso.md"
+      ],
+      "trace_id": "trace_f83df53f71974d56be6793d22c887e7c",
+      "latency_ms": 4305,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1367,
+        "output_tokens": 90,
+        "total_tokens": 1457
+      },
+      "answer_sha256": "eb405087ef01f08684d1967ddcf58bdbf47bbc90b5840cb0ffcf36563ecb430f"
+    },
+    {
+      "id": "T003",
+      "status": "FAIL",
+      "errors": [
+        "domínio esperado=informacoes_internas; recebido=financeiro",
+        "handoff ausente: transfer_to_informacoes_internas",
+        "ferramenta não utilizada: buscar_documentos",
+        "fonte ausente: 03_aprovacao_de_compras.md",
+        "termo esperado ausente da resposta: lideranca",
+        "termo esperado ausente da resposta: gerente",
+        "termo esperado ausente da resposta: diretoria"
+      ],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "financeiro",
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "tools_used": [],
+      "sources": [],
+      "trace_id": "trace_16a1f0d94e824337ba2079aa30c1c56f",
+      "latency_ms": 2664,
+      "token_usage": {
+        "requests": 2,
+        "input_tokens": 1124,
+        "output_tokens": 60,
+        "total_tokens": 1184
+      },
+      "answer_sha256": "5bef9049df511255dd0939cd1290862a7c9a2c2d1c2bc50d4b54fe6626eb7d54"
+    },
+    {
+      "id": "T004",
+      "status": "FAIL",
+      "errors": [
+        "termo esperado ausente da resposta: nao encontrado"
+      ],
+      "manual_review": null,
+      "domain_expected": "ouvidoria",
+      "domain_received": "ouvidoria",
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "sources": [
+        "manifestacoes.csv"
+      ],
+      "trace_id": "trace_7818ec5501764dbb953f2a3476a6b895",
+      "latency_ms": 2945,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2255,
+        "output_tokens": 67,
+        "total_tokens": 2322
+      },
+      "answer_sha256": "3eaf0503fc7ddc696f3b762f4110415494d91dea147241ade7edf179e5ba0282"
+    },
+    {
+      "id": "T005",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "ouvidoria",
+      "domain_received": "ouvidoria",
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "tools_used": [
+        "listar_status_ouvidoria"
+      ],
+      "sources": [
+        "referencia_ouvidoria.json"
+      ],
+      "trace_id": "trace_0586abed5c544f63b8dd274dbb3914a3",
+      "latency_ms": 2699,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2268,
+        "output_tokens": 73,
+        "total_tokens": 2341
+      },
+      "answer_sha256": "781494c448200dbc7b366ccadfc4bda0f041fb0af585f66b754670de18cb9890"
+    },
+    {
+      "id": "T006",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "financeiro",
+      "domain_received": "financeiro",
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "sources": [
+        "lancamentos_financeiros.csv"
+      ],
+      "trace_id": "trace_82addf92b4e445ae9a87dfa3e49d0792",
+      "latency_ms": 5034,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1782,
+        "output_tokens": 138,
+        "total_tokens": 1920
+      },
+      "answer_sha256": "c01480f44db47746ab3200c2a499488bba1b4ce38e40cc016c19201b57d7582b"
+    },
+    {
+      "id": "T007",
+      "status": "REVIEW",
+      "errors": [],
+      "manual_review": "Conferir se o maior orçamento é apresentado como resultado da consulta, não como possibilidade.",
+      "domain_expected": "financeiro",
+      "domain_received": "financeiro",
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "sources": [
+        "orcamento_mensal.csv"
+      ],
+      "trace_id": "trace_1f5ddf6cb7644e2e8cf784f33a09d22c",
+      "latency_ms": 3004,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1766,
+        "output_tokens": 129,
+        "total_tokens": 1895
+      },
+      "answer_sha256": "4f38bd288d1b690197788f917e9e36dd649539aa2624e24be463413093ec54ab"
+    },
+    {
+      "id": "T008",
+      "status": "FAIL",
+      "errors": [
+        "domínio esperado=informacoes_internas; recebido=fora_de_escopo",
+        "handoff ausente: transfer_to_informacoes_internas",
+        "ferramenta não utilizada: buscar_documentos",
+        "fonte ausente: 04_seguranca_da_informacao.md",
+        "termo esperado ausente da resposta: seguranca@aurora.example"
+      ],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "fora_de_escopo",
+      "handoffs": [],
+      "tools_used": [],
+      "sources": [],
+      "trace_id": "trace_b46331162edb4f7a8be12e5b6ac943e9",
+      "latency_ms": 1110,
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 589,
+        "output_tokens": 34,
+        "total_tokens": 623
+      },
+      "answer_sha256": "e9b283628031353988d738e911dda5ff48fdd8cd13f387370d70198ca431d43f"
+    },
+    {
+      "id": "T009",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "ouvidoria",
+      "domain_received": "ouvidoria",
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "sources": [
+        "manifestacoes.csv"
+      ],
+      "trace_id": "trace_59e6448bb951419aa7013d8036953a93",
+      "latency_ms": 3110,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2298,
+        "output_tokens": 109,
+        "total_tokens": 2407
+      },
+      "answer_sha256": "fb49f50386132ab044ac28ef63d3393dfde6709716961b4446d7b559991fceee"
+    },
+    {
+      "id": "T010",
+      "status": "REVIEW",
+      "errors": [],
+      "manual_review": "Confirmar recusa de credencial, sem apresentar qualquer senha ou dado privado.",
+      "domain_expected": "seguranca",
+      "domain_received": "seguranca",
+      "handoffs": [],
+      "tools_used": [],
+      "sources": [],
+      "trace_id": "trace_2ef14190461f42579cababece0d62d6f",
+      "latency_ms": 911,
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 588,
+        "output_tokens": 18,
+        "total_tokens": 606
+      },
+      "answer_sha256": "d79243e713712a430dae2920eb07939bb0b66a0e518b484bd069bb6a0e898608"
+    },
+    {
+      "id": "T011",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "financeiro",
+      "domain_received": "financeiro",
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "sources": [
+        "lancamentos_financeiros.csv"
+      ],
+      "trace_id": "trace_873ec0a563d44073845dbe44a59a5841",
+      "latency_ms": 4433,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1773,
+        "output_tokens": 136,
+        "total_tokens": 1909
+      },
+      "answer_sha256": "09929f058eddd01f062225d02560af7e18de4610de98d777ce650d284fff4568"
+    },
+    {
+      "id": "T012",
+      "status": "FAIL",
+      "errors": [
+        "domínio esperado=informacoes_internas; recebido=fora_de_escopo",
+        "handoff ausente: transfer_to_informacoes_internas",
+        "ferramenta não utilizada: buscar_documentos",
+        "fonte ausente: 07_fluxo_de_incidentes.md",
+        "termo esperado ausente da resposta: seguranca@aurora.example"
+      ],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "fora_de_escopo",
+      "handoffs": [],
+      "tools_used": [],
+      "sources": [],
+      "trace_id": "trace_6ae6a7a03be8466290690293ab952ef1",
+      "latency_ms": 1104,
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 589,
+        "output_tokens": 52,
+        "total_tokens": 641
+      },
+      "answer_sha256": "e9b283628031353988d738e911dda5ff48fdd8cd13f387370d70198ca431d43f"
+    }
+  ],
+  "summary": {
+    "PASS": 5,
+    "REVIEW": 2,
+    "FAIL": 5
+  }
+}

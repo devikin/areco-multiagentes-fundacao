@@ -1,0 +1,79 @@
+{
+  "reason": "testes de contrato histórico substituído; sem descarte de evidências",
+  "app_version": "0.2.35",
+  "updated_utc": "2026-10-22T17:09:11.996738+00:00",
+  "files": [
+    {
+      "name": "test_orchestrator_policy_v0210.py",
+      "sha256": "90b02a315115d13d9d4306f5952eadbddaefa4b42deca2c3ae5afefcd8a730eb",
+      "original": "tests/test_orchestrator_policy_v0210.py",
+      "archive": "docs/tests_historicos/test_orchestrator_policy_v0210.py"
+    },
+    {
+      "name": "test_scope_guard_v0212.py",
+      "sha256": "6ef55d0e96a35d7a8d83347494b4700cfeb320e638faa6cc0bfc5aed13971b0d",
+      "original": "tests/test_scope_guard_v0212.py",
+      "archive": "docs/tests_historicos/test_scope_guard_v0212.py"
+    },
+    {
+      "name": "test_official_regression_v0213.py",
+      "sha256": "0db89ed3da2b2c1d11791eb8097046d428d885c4cd3f810366fd39a58fdaf0c1",
+      "original": "tests/test_official_regression_v0213.py",
+      "archive": "docs/tests_historicos/test_official_regression_v0213.py"
+    },
+    {
+      "name": "test_conversational_v0216.py",
+      "sha256": "976a1a5b944fc3a73f9bffc0dec0097465b8d2907c93f17671430b11f5685e9a",
+      "original": "tests/test_conversational_v0216.py",
+      "archive": "docs/tests_historicos/test_conversational_v0216.py"
+    },
+    {
+      "name": "test_social_fallback_v0217.py",
+      "sha256": "036b3bcc4a9fd5cdecaa85b5bb688faa85c1788d790419d82fdd5b071e8701ed",
+      "original": "tests/test_social_fallback_v0217.py",
+      "archive": "docs/tests_historicos/test_social_fallback_v0217.py"
+    },
+    {
+      "name": "test_session_conversation_v0218.py",
+      "sha256": "52d438e7ef9d6da0fc7882ac51e291e25bec2d783c50b5ef4bd8b2734b228901",
+      "original": "tests/test_session_conversation_v0218.py",
+      "archive": "docs/tests_historicos/test_session_conversation_v0218.py"
+    },
+    {
+      "name": "test_browser_regression_v0219.py",
+      "sha256": "c7bef1bc6e1512f691cea47290809d82c04bc331ef239ba4226aa562f079a45a",
+      "original": "tests/test_browser_regression_v0219.py",
+      "archive": "docs/tests_historicos/test_browser_regression_v0219.py"
+    },
+    {
+      "name": "test_human_fallback_v0220.py",
+      "sha256": "4664ca3c9cc97702edd948296d07aca243c579a9b7270c999e09eb1293f37acc",
+      "original": "tests/test_human_fallback_v0220.py",
+      "archive": "docs/tests_historicos/test_human_fallback_v0220.py"
+    },
+    {
+      "name": "test_ouvidoria_followup_v0220.py",
+      "sha256": "bf7816d03ed4b9e27f1dda3868acf0dc2c76e2f7d28d5e754f6729c214aeb042",
+      "original": "tests/test_ouvidoria_followup_v0220.py",
+      "archive": "docs/tests_historicos/test_ouvidoria_followup_v0220.py"
+    },
+    {
+      "name": "test_ui_version_v0221.py",
+      "sha256": "1766bc65dc455bf20716646fd7338d44fd98d50caec850c2c378443377972eee",
+      "original": "tests/test_ui_version_v0221.py",
+      "archive": "docs/tests_historicos/test_ui_version_v0221.py"
+    },
+    {
+      "name": "test_input_validation_v0222.py",
+      "sha256": "517132b396ca781185f091c43cd50c7bb75c8cb878d0fe0cf79b8a01e270e0f4",
+      "original": "tests/test_input_validation_v0222.py",
+      "archive": "docs/tests_historicos/test_input_validation_v0222.py"
+    },
+    {
+      "name": "test_followup_year_v0223.py",
+      "sha256": "f9e03c3246bac92f3841acdf9d6f477ecf71af86d16171da06041fcb3a1cd7e8",
+      "original": "tests/test_followup_year_v0223.py",
+      "archive": "docs/tests_historicos/test_followup_year_v0223.py"
+    }
+  ]
+}

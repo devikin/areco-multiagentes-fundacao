@@ -1,0 +1,62 @@
+{
+  "suite": "continuity_frontend",
+  "version": "0.2.31",
+  "created_at": "2026-10-22T02:30:23.764245+00:00",
+  "results": [
+    {
+      "id": "Y01",
+      "session_id": "e1316673-1407-44a0-a506-7937242b72a5",
+      "question": "Quero consultar minhas despesas por departamento",
+      "answer": "Para consultar suas despesas por departamento, por favor, informe o ano completo (com quatro dígitos) do período que deseja consultar.",
+      "domain": "financeiro",
+      "sources": [],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "trace_id": "trace_bfbbdf8eff4c401482644283d65b6723",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "Y02",
+      "session_id": "e1316673-1407-44a0-a506-7937242b72a5",
+      "question": "205",
+      "answer": "O ano informado \"205\" está incompleto. Por favor, informe o ano completo com quatro dígitos para que eu possa consultar suas despesas por departamento.",
+      "domain": "financeiro",
+      "sources": [],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "handoffs": [],
+      "trace_id": "trace_b703ac62b5d9478da773a11f621f7010",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "Y03",
+      "session_id": "e1316673-1407-44a0-a506-7937242b72a5",
+      "question": "2025",
+      "answer": "Em 2025, as despesas por departamento foram aproximadamente os seguintes valores:\n\n- Marketing: R$ 329.703,64\n- Financeiro: R$ 307.279,43\n- Comercial: R$ 285.650,57\n- Recursos Humanos: R$ 258.949,51\n- Tecnologia: R$ 234.196,14\n- Operações: R$ 232.285,60\n\nEsses valores correspondem aos lançamentos realizados no período de janeiro a dezembro de 2025. Posso ajudar em algo mais?",
+      "domain": "financeiro",
+      "sources": [
+        {
+          "source": "lancamentos_financeiros.csv",
+          "detail": "150 registros; 2025 meses 01–12"
+        }
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "handoffs": [],
+      "trace_id": "trace_93377b10b2f049728ab5f27bf02171c3",
+      "errors": [],
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "PASS": 3
+  }
+}

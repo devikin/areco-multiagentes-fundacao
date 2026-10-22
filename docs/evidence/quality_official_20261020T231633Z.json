@@ -1,0 +1,153 @@
+{
+  "suite": "official",
+  "created_at": "2026-10-20T23:16:33.384025+00:00",
+  "tests_requested": 5,
+  "results": [
+    {
+      "id": "T002",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "02_politica_reembolso.md"
+      ],
+      "trace_id": "trace_178b14930bd74c1b8673bf16f6060395",
+      "latency_ms": 4901,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1807,
+        "output_tokens": 165,
+        "total_tokens": 1972
+      },
+      "answer_sha256": "516ba0f41f7b8c33829c9131a907dba9ec251c7a7eeea55fb6c5856a3e10ed22",
+      "question": "Qual o prazo para pedir reembolso?",
+      "answer": "De acordo com a **Política de reembolso — Aurora Serviços Digitais S.A.** (versão 2.0), a solicitação de reembolso deve ser enviada em até **10 dias corridos** após a despesa. \n\nAlém disso, é necessário:\n- Comprovante fiscal legível e justificativa de negócio.\n- A aprovação inicial deve ser feita pela liderança, seguida da validação pelo Financeiro.\n\nO prazo operacional para análise é de até **7 dias úteis** após o envio completo da documentação. Os reembolsos aprovados serão pagos no próximo ciclo financeiro disponível."
+    },
+    {
+      "id": "T003",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "03_aprovacao_de_compras.md"
+      ],
+      "trace_id": "trace_67e956dc363843bf96911587a32352c9",
+      "latency_ms": 3883,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1833,
+        "output_tokens": 148,
+        "total_tokens": 1981
+      },
+      "answer_sha256": "80b39c472bf92b0652c2226db02c4eb98d5544d9e2011c21951a3b9f895ae6ba",
+      "question": "Quais são as aprovações para uma compra de R$ 12.000?",
+      "answer": "Para uma compra de R$ 12.000, as aprovações necessárias são:\n\n1. Aprovação da liderança do centro de custo.\n2. Aprovação do gerente da área.\n3. Aprovação da diretoria.\n\nÉ importante observar que não é permitido dividir pedidos para evitar alçadas. A ordem de compra deve ser emitida antes da contratação, exceto em casos de emergência documentada.\n\nFonte: Processo de aprovação de compras, versão 1.1."
+    },
+    {
+      "id": "T004",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "ouvidoria",
+      "domain_received": "ouvidoria",
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "sources": [
+        "manifestacoes.csv"
+      ],
+      "trace_id": "trace_df726e83a21d46058ed6d2c0531c5a3a",
+      "latency_ms": 2882,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2563,
+        "output_tokens": 71,
+        "total_tokens": 2634
+      },
+      "answer_sha256": "b40b2ee6a3bc379bc098fae214278d93717dc8e3f56006428392155e7d4b1905",
+      "question": "Existe o protocolo OUV-9999?",
+      "answer": "Protocolo OUV-9999 não encontrado na base de Ouvidoria."
+    },
+    {
+      "id": "T008",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "04_seguranca_da_informacao.md"
+      ],
+      "trace_id": "trace_2c8c1cc92b234f4f9bb346d3d8c235a4",
+      "latency_ms": 3380,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1750,
+        "output_tokens": 95,
+        "total_tokens": 1845
+      },
+      "answer_sha256": "6b1daa23c3f1a536eade095f6e277de15d3e88850215b777484f6735ffbdea97",
+      "question": "Como reporto um e-mail de phishing?",
+      "answer": "Para reportar um e-mail de phishing, você deve encaminhar a suspeita imediatamente para o e-mail **seguranca@aurora.example**. Essa é a orientação contida no documento \"Segurança da informação\", versão 1.0."
+    },
+    {
+      "id": "T012",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "07_fluxo_de_incidentes.md",
+        "04_seguranca_da_informacao.md"
+      ],
+      "trace_id": "trace_0f2dc37c0bd84f7d859a9794087debb3",
+      "latency_ms": 3493,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1920,
+        "output_tokens": 200,
+        "total_tokens": 2120
+      },
+      "answer_sha256": "b144d4454f23df0d9675c98e5add62e483c8ed75fcc64e7005f227be7715ee48",
+      "question": "O que fazer se houver incidente de segurança?",
+      "answer": "Em caso de incidente de segurança, você deve seguir os seguintes passos:\n\n1. **Reportar imediatamente** ao canal de segurança: **seguranca@aurora.example**.\n2. Caso haja falhas de sistemas, registre no portal de TI, incluindo horário, sistema afetado, impacto e evidências não sensíveis.\n3. O suporte classifica a severidade e encaminha para o time responsável.\n4. **Importante**: Não inclua senhas, tokens, dados pessoais desnecessários ou informações sigilosas no chamado.\n5. Em situações de **indisponibilidade crítica**, use o telefone interno de contingência divulgado pela TI.\n\nEssas diretrizes estão documentadas no \"Registro e tratamento de incidentes\", versão 1.0."
+    }
+  ],
+  "summary": {
+    "PASS": 5,
+    "REVIEW": 0,
+    "FAIL": 0
+  }
+}

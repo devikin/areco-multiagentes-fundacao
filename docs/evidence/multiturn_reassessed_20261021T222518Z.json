@@ -1,0 +1,212 @@
+{
+  "suite": "multiturn_handoffs",
+  "version": "0.2.27",
+  "created_at": "2026-10-21T22:25:18.539404+00:00",
+  "session_id": "59eee526-3716-49cf-9fda-e3a81deea88a",
+  "results": [
+    {
+      "id": "C01",
+      "objective": "Busca inicial na Ouvidoria",
+      "question": "Qual o status do protocolo OUV-0002?",
+      "answer": "O status do protocolo OUV-0002 é \"Aguardando área responsável\". Se precisar de mais alguma informação, estou à disposição.",
+      "domain": "ouvidoria",
+      "sources": [
+        {
+          "source": "manifestacoes.csv",
+          "detail": "OUV-0002"
+        }
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "trace_id": "trace_0deba17d2fea4c178033acaa7ddaeb5d",
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2207,
+        "output_tokens": 68,
+        "total_tokens": 2275
+      },
+      "evidence_origin": "current_tool",
+      "historical_evidence": [],
+      "status": "PASS",
+      "errors": [],
+      "previous_status": "PASS",
+      "previous_errors": []
+    },
+    {
+      "id": "C02",
+      "objective": "Memória do mesmo protocolo",
+      "question": "E qual é a prioridade dele?",
+      "answer": "A prioridade do protocolo OUV-0002 é baixa. Posso ajudar em mais alguma coisa?",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_bec0dad437944b6a86d7e1eb7314aea6",
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 655,
+        "output_tokens": 22,
+        "total_tokens": 677
+      },
+      "evidence_origin": "prior_tool_record",
+      "historical_evidence": [
+        {
+          "turn": "C01",
+          "source": "manifestacoes.csv",
+          "tool": "buscar_protocolo",
+          "trace_id": "trace_0deba17d2fea4c178033acaa7ddaeb5d"
+        }
+      ],
+      "status": "PASS",
+      "errors": [],
+      "previous_status": "FAIL",
+      "previous_errors": [
+        "Ouvidoria perdeu o contexto (domínio=conversa)"
+      ]
+    },
+    {
+      "id": "C03",
+      "objective": "Handoff da Ouvidoria para Internas",
+      "question": "Como solicito férias?",
+      "answer": "Para solicitar férias, você deve fazer a solicitação pelo portal interno com pelo menos 30 dias corridos de antecedência. A liderança direta analisará essa solicitação em até 5 dias úteis. O período de férias depende da legislação aplicável, do saldo disponível e da cobertura operacional. Se precisar alterar o período após a aprovação, também deve fazer pelo portal interno e aguardar nova aprovação. Se tiver dúvidas, pode encaminhar ao RH pelo canal interno rh@aurora.example. Posso ajudar em mais alguma coisa?",
+      "domain": "informacoes_internas",
+      "sources": [
+        {
+          "source": "01_politica_ferias.md",
+          "detail": "Política de férias — Aurora Serviços Digitais S.A. (versão 1.2)"
+        }
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "trace_id": "trace_a7c4ea19a3d8460f9684d550cf5a8efe",
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2053,
+        "output_tokens": 143,
+        "total_tokens": 2196
+      },
+      "evidence_origin": "current_tool",
+      "historical_evidence": [],
+      "status": "PASS",
+      "errors": [],
+      "previous_status": "PASS",
+      "previous_errors": []
+    },
+    {
+      "id": "C04",
+      "objective": "Memória da política de férias",
+      "question": "E com quantos dias de antecedência?",
+      "answer": "A solicitação de férias deve ser feita com pelo menos 30 dias corridos de antecedência pelo portal interno. Posso ajudar em mais alguma dúvida?",
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_cb9dae0abe7446b29764119a2f0dd108",
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 1080,
+        "output_tokens": 33,
+        "total_tokens": 1113
+      },
+      "evidence_origin": "prior_answer",
+      "historical_evidence": [
+        {
+          "turn": "C03",
+          "source": "01_politica_ferias.md",
+          "tool": "buscar_documentos",
+          "trace_id": "trace_a7c4ea19a3d8460f9684d550cf5a8efe"
+        }
+      ],
+      "status": "PASS",
+      "errors": [],
+      "previous_status": "FAIL",
+      "previous_errors": [
+        "Informações Internas não assumiu/manteve a conversa (domínio=conversa)"
+      ]
+    },
+    {
+      "id": "C05",
+      "objective": "Handoff para Financeiro",
+      "question": "Qual departamento tem maior orçamento em janeiro de 2026?",
+      "answer": "O departamento que tem o maior orçamento em janeiro de 2026 é o departamento de Tecnologia, com um orçamento de R$ 43.229,05. Posso ajudar com mais alguma informação?",
+      "domain": "financeiro",
+      "sources": [
+        {
+          "source": "orcamento_mensal.csv",
+          "detail": "6 registros; 2026 meses 01–01"
+        }
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "trace_id": "trace_3b56dbb1b288434eaa328463e5ba17b2",
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 4511,
+        "output_tokens": 129,
+        "total_tokens": 4640
+      },
+      "evidence_origin": "current_tool",
+      "historical_evidence": [],
+      "status": "PASS",
+      "errors": [],
+      "previous_status": "PASS",
+      "previous_errors": []
+    },
+    {
+      "id": "C06",
+      "objective": "Memória e mudança de mês no Financeiro",
+      "question": "E em fevereiro de 2026?",
+      "answer": "Em fevereiro de 2026, o departamento com o maior orçamento também é o de Tecnologia, com um orçamento de R$ 48.243,24. Precisa de mais alguma informação?",
+      "domain": "financeiro",
+      "sources": [
+        {
+          "source": "orcamento_mensal.csv",
+          "detail": "6 registros; 2026 meses 02–02"
+        }
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "trace_id": "trace_5bd453b58a4c4403957707e720bb306c",
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 5177,
+        "output_tokens": 128,
+        "total_tokens": 5305
+      },
+      "evidence_origin": "current_tool",
+      "historical_evidence": [],
+      "status": "PASS",
+      "errors": [],
+      "previous_status": "PASS",
+      "previous_errors": []
+    }
+  ],
+  "evaluator_revision": "context-aware-v2",
+  "reassessed_from": "H:\\Meu Drive\\Desafio IA Areco\\areco-multiagentes-fundacao\\docs\\evidence\\multiturn_handoffs_20261021T221158Z.json",
+  "original_summary": {
+    "PASS": 4,
+    "FAIL": 2
+  },
+  "limitations": "Modo offline: engine, generation_method e session_id por turno não constavam do JSON anterior; checks originais foram previamente executados e não são repetidos.",
+  "api_calls": 0,
+  "summary": {
+    "PASS": 6,
+    "FAIL": 0
+  }
+}

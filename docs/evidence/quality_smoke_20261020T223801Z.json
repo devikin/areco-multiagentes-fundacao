@@ -1,0 +1,157 @@
+{
+  "suite": "smoke",
+  "created_at": "2026-10-20T22:38:01.687398+00:00",
+  "tests_requested": 6,
+  "results": [
+    {
+      "id": "T001",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "01_politica_ferias.md",
+        "08_faq_rh.md"
+      ],
+      "trace_id": "trace_35fa3d4bbae741048425e58869e97758",
+      "latency_ms": 4587,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1479,
+        "output_tokens": 154,
+        "total_tokens": 1633
+      },
+      "answer_sha256": "d4931e3608f21a860730ce1dc615f6f8f4e62681db03afb9517ddb700224dc58"
+    },
+    {
+      "id": "T003",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "informacoes_internas",
+      "domain_received": "informacoes_internas",
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "sources": [
+        "03_aprovacao_de_compras.md"
+      ],
+      "trace_id": "trace_1c1966adbb4f4c269fe314b6721b466f",
+      "latency_ms": 3607,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1357,
+        "output_tokens": 124,
+        "total_tokens": 1481
+      },
+      "answer_sha256": "f561020be3ef7e14ca369a679afb6970e50e94b43462c11b4f2bbc9034050df0"
+    },
+    {
+      "id": "T006",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "financeiro",
+      "domain_received": "financeiro",
+      "handoffs": [
+        "transfer_to_financeiro"
+      ],
+      "tools_used": [
+        "consultar_financeiro"
+      ],
+      "sources": [
+        "lancamentos_financeiros.csv"
+      ],
+      "trace_id": "trace_b8eab65061154640959d7af50b025f77",
+      "latency_ms": 3657,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 1746,
+        "output_tokens": 133,
+        "total_tokens": 1879
+      },
+      "answer_sha256": "7332c0c4a938948c9bb590834b3a376f0c011244f550451d1e9312b1cb6506bf"
+    },
+    {
+      "id": "T009",
+      "status": "PASS",
+      "errors": [],
+      "manual_review": null,
+      "domain_expected": "ouvidoria",
+      "domain_received": "ouvidoria",
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "sources": [
+        "manifestacoes.csv"
+      ],
+      "trace_id": "trace_d4bfb6661452442d9ec4ba9620ddd4a8",
+      "latency_ms": 4096,
+      "token_usage": {
+        "requests": 3,
+        "input_tokens": 2262,
+        "output_tokens": 109,
+        "total_tokens": 2371
+      },
+      "answer_sha256": "e179fa95830eddaec6b34af6d6be3d7158e1f72fcfa59b16efe75f73ea16f6ae"
+    },
+    {
+      "id": "E002",
+      "status": "REVIEW",
+      "errors": [],
+      "manual_review": "Deve pedir esclarecimento sem inventar prazo.",
+      "domain_expected": "ambiguo",
+      "domain_received": "ambiguo",
+      "handoffs": [],
+      "tools_used": [],
+      "sources": [],
+      "trace_id": "trace_fa3f0d8111e34caa8f73f0a476d278a6",
+      "latency_ms": 863,
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 549,
+        "output_tokens": 21,
+        "total_tokens": 570
+      },
+      "answer_sha256": "192e1b6fa33d0ca99d9ffc5537370b378eefe4efb5ecde3390d3875a608fd727"
+    },
+    {
+      "id": "E003",
+      "status": "REVIEW",
+      "errors": [],
+      "manual_review": "Não responder à pergunta de conhecimento geral.",
+      "domain_expected": "fora_de_escopo",
+      "domain_received": "fora_de_escopo",
+      "handoffs": [],
+      "tools_used": [],
+      "sources": [],
+      "trace_id": "trace_9b60c51e7aba4ee1bd19dc9405f0aee8",
+      "latency_ms": 1345,
+      "token_usage": {
+        "requests": 1,
+        "input_tokens": 555,
+        "output_tokens": 48,
+        "total_tokens": 603
+      },
+      "answer_sha256": "074684f040567e9464c68f0164fe1d0f129d6225dcde5c44ff8311aa33bd5bde"
+    }
+  ],
+  "summary": {
+    "PASS": 4,
+    "REVIEW": 2,
+    "FAIL": 0
+  }
+}

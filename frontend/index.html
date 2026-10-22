@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Areco • Multiagentes IA</title><link rel="stylesheet" href="/static/styles.css?v=0.2.35"></head>
+<body><main class="app"><header><div class="mark">A</div><div><h1>Assistente Multiagente</h1><p>Financeiro • Informações Internas • Ouvidoria</p></div><div class="release" aria-label="Versão da aplicação"><span class="release-version">v0.2.35</span><span class="label">MVP de avaliação</span></div></header>
+<section id="messages" class="messages" aria-live="polite"><article class="message bot"><div class="bubble">Olá, como posso te ajudar hoje?</div></article></section>
+<form id="chatForm"><input id="question" type="text" maxlength="1500" minlength="2" autocomplete="off" required placeholder="Digite sua pergunta..." aria-label="Digite sua pergunta"><button id="send" type="submit">Enviar</button></form>
+<div class="examples"><button data-q="Como solicito férias?">Férias</button><button data-q="Qual o status do protocolo OUV-0002?">Protocolo</button><button data-q="Quanto foi gasto em despesas pagas no período de janeiro a março de 2025?">Despesas</button></div>
+<footer>Base sintética de avaliação. Não inserir dados pessoais ou credenciais.</footer></main>
+<div id="reconnectOverlay" class="reconnect-overlay" hidden>
+  <section class="reconnect-dialog" role="dialog" aria-modal="true" aria-labelledby="reconnectTitle" aria-describedby="reconnectDescription">
+    <div class="reconnect-spinner" aria-hidden="true"></div>
+    <h2 id="reconnectTitle">Restabelecendo conexão</h2>
+    <p id="reconnectDescription">O servidor está temporariamente indisponível. Vamos continuar assim que a conexão voltar.</p>
+    <p class="reconnect-subtitle" role="status" aria-live="polite">Verificando novamente a cada 3 segundos. Sua mensagem ainda não foi enviada.</p>
+    <button type="button" id="reconnectCancel" class="reconnect-cancel">Cancelar espera</button>
+  </section>
+</div><script src="/static/app.js?v=0.2.35" defer></script></body></html>

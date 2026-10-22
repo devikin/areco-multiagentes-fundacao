@@ -1,0 +1,21 @@
+:root{font:16px system-ui,-apple-system,Segoe UI,sans-serif;color:#1d2939;background:#eef3f9}*{box-sizing:border-box}body{margin:0}.app{max-width:900px;min-height:100vh;margin:auto;background:white;box-shadow:0 0 40px #d7e1ef}header{padding:24px 28px;border-bottom:1px solid #e4e7ec;display:flex;align-items:center;gap:14px}.mark{background:#1265b3;color:white;border-radius:12px;font-size:23px;font-weight:800;padding:10px 17px}h1{margin:0;font-size:19px}header p{margin:5px 0 0;color:#667085;font-size:13px}.label{margin-left:0;border:1px solid #d3e5fa;border-radius:30px;padding:7px 11px;color:#1265b3;font-size:12px}.messages{height:60vh;min-height:300px;overflow:auto;padding:28px;display:flex;flex-direction:column;gap:20px;background:linear-gradient(#fff,#f8fafc)}.message{display:flex;flex-direction:column;align-items:flex-start;gap:6px}.message.user{align-items:flex-end}.bubble{white-space:pre-wrap;max-width:82%;padding:13px 17px;border-radius:14px;background:#f0f4f9;line-height:1.55;overflow-wrap:anywhere}.user .bubble{background:#1265b3;color:white}.meta{font-size:11px;color:#667085;max-width:82%}form{padding:15px 25px;display:flex;gap:12px;border-top:1px solid #e4e7ec}input{flex:1;border:1px solid #d0d5dd;padding:13px;border-radius:11px;min-width:0}button{border:0;border-radius:11px;padding:11px 18px;cursor:pointer;background:#1265b3;color:white}button:disabled{opacity:.6;cursor:wait}.examples{display:flex;gap:7px;flex-wrap:wrap;padding:0 25px 15px}.examples button{font-size:12px;background:#ecf3fb;color:#135c9e}footer{text-align:center;color:#98a2b3;font-size:12px;padding:10px 20px 18px}@media(max-width:600px){header{padding:17px}.label{display:none}.messages{height:65vh;padding:15px}.bubble{max-width:95%}form{padding:12px}}
+
+/* v0.2.21 — versão acima do selo MVP, inclusive em telas estreitas. */
+.release{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0;gap:5px}
+.release-version{font-size:12px;font-weight:600;color:#667085}
+@media(max-width:600px){.release{margin-left:auto}.release-version{font-size:11px}}
+
+
+/* v0.2.35 — overlay de reconexão, nítido sobre o restante da interface desfocado. */
+.reconnect-overlay[hidden]{display:none}
+.reconnect-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(239,244,250,.55);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.reconnect-dialog{width:min(100%,430px);padding:32px 28px;text-align:center;border-radius:18px;background:#fff;border:1px solid #dce5ef;box-shadow:0 15px 55px rgba(16,43,72,.17);color:#1d2939}
+.reconnect-dialog h2{font-size:20px;margin:16px 0 10px}
+.reconnect-dialog p{font-size:14px;line-height:1.55;margin:0;color:#475467}
+.reconnect-dialog .reconnect-subtitle{font-size:12px;color:#667085;margin-top:14px}
+.reconnect-spinner{width:42px;height:42px;margin:0 auto;border-radius:50%;border:4px solid #dce9f8;border-top-color:#1265b3;animation:reconnect-rotate 1s linear infinite}
+.reconnect-cancel{margin-top:21px;background:#eaf1f9;color:#155b9b}
+.reconnect-cancel:hover{background:#dce9f8}
+.reconnect-cancel:focus-visible{outline:3px solid #84baf6;outline-offset:3px}
+@keyframes reconnect-rotate{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.reconnect-spinner{animation:none}}

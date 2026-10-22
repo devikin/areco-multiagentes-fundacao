@@ -1,0 +1,98 @@
+{
+  "suite": "continuity_frontend",
+  "version": "0.2.31",
+  "created_at": "2026-10-22T02:29:37.940017+00:00",
+  "results": [
+    {
+      "id": "X01",
+      "session_id": "72929520-4868-4dbf-87a5-c4c6c78ca7b9",
+      "question": "Qual o prazo para solicitar reembolso?",
+      "answer": "O prazo para solicitar reembolso é de até 10 dias corridos após a despesa, conforme a política de reembolso da Aurora Serviços Digitais S.A. É necessário enviar a solicitação com comprovante fiscal legível e justificativa de negócio.",
+      "domain": "informacoes_internas",
+      "sources": [
+        {
+          "source": "02_politica_reembolso.md",
+          "detail": "Política de reembolso — Aurora Serviços Digitais S.A. (versão 2.0)"
+        }
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "trace_id": "trace_7c1487ebcf404239b3015fcaf3343121",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "X02",
+      "session_id": "72929520-4868-4dbf-87a5-c4c6c78ca7b9",
+      "question": "OUV-0016",
+      "answer": "O protocolo OUV-0016 está com o status \"Aguardando área responsável\" e a área responsável é o Financeiro. Trata-se de uma manifestação na categoria \"Reembolso\". Posso ajudar com mais alguma informação sobre esse protocolo?",
+      "domain": "ouvidoria",
+      "sources": [
+        {
+          "source": "manifestacoes.csv",
+          "detail": "OUV-0016"
+        }
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "trace_id": "trace_e2862661d0044deca21306756060b133",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "X03",
+      "session_id": "72929520-4868-4dbf-87a5-c4c6c78ca7b9",
+      "question": "Como solicito ferias?",
+      "answer": "Para solicitar férias, você deve realizar a solicitação pelo portal interno com pelo menos 30 dias corridos de antecedência. A liderança direta analisará a solicitação em até 5 dias úteis. Caso haja necessidade de alteração após a aprovação, ela deverá ser solicitada pelo portal e passar por nova aprovação. Para dúvidas específicas, o RH pode ser contatado pelo e-mail rh@aurora.example.",
+      "domain": "informacoes_internas",
+      "sources": [
+        {
+          "source": "01_politica_ferias.md",
+          "detail": "Política de férias — Aurora Serviços Digitais S.A. (versão 1.2)"
+        }
+      ],
+      "tools_used": [
+        "buscar_documentos"
+      ],
+      "handoffs": [
+        "transfer_to_informacoes_internas"
+      ],
+      "trace_id": "trace_ec0d768339e9443db78dfc78b1b8b54c",
+      "errors": [],
+      "status": "PASS"
+    },
+    {
+      "id": "X04",
+      "session_id": "72929520-4868-4dbf-87a5-c4c6c78ca7b9",
+      "question": "OUV-0002",
+      "answer": "O protocolo OUV-0002 está com o status \"Aguardando área responsável\". A categoria da manifestação é \"Privacidade\" e a área responsável é o Encarregado de Dados. Deseja saber mais alguma coisa sobre esse protocolo?",
+      "domain": "ouvidoria",
+      "sources": [
+        {
+          "source": "manifestacoes.csv",
+          "detail": "OUV-0002"
+        }
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "trace_id": "trace_d9b3dc212f064ec5a1cda35b769bb5e1",
+      "errors": [],
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "PASS": 4
+  }
+}

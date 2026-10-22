@@ -1,0 +1,71 @@
+{
+  "suite": "greeting_v032",
+  "version": "0.2.32",
+  "created_at": "2026-10-22T14:26:16.652887+00:00",
+  "results": [
+    {
+      "id": "G01",
+      "question": "oi, tudo bem?",
+      "answer": "Tudo bem, e com você? Como posso ajudar?",
+      "status": "PASS",
+      "errors": [],
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_e409468d9dab4cdfa12196895547fb60",
+      "session_id": "f5ab8465-5b6a-460f-8209-e070d190b6cf"
+    },
+    {
+      "id": "G02",
+      "question": "ola td bem? quero saber sobre protocolo",
+      "answer": "Tudo bem, obrigado! Para ajudar com o protocolo, você pode me informar o número do protocolo OUV-NNNN? Assim posso verificar a situação para você.",
+      "status": "PASS",
+      "errors": [],
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_4488294481af4020be752eb6114280af",
+      "session_id": "a6ed9207-617c-412e-a23d-32c178399889"
+    },
+    {
+      "id": "G03",
+      "question": "Qual e a situacao do protocolo OUV-0016?",
+      "answer": "O protocolo OUV-0016 está com a situação \"Aguardando área responsável\". Trata-se de uma manifestação da categoria Reembolso, com prioridade média, e a área responsável é o Financeiro. A data de abertura foi 21 de setembro de 2026. Posso ajudar com mais alguma informação?",
+      "status": "PASS",
+      "errors": [],
+      "domain": "ouvidoria",
+      "sources": [
+        {
+          "source": "manifestacoes.csv",
+          "detail": "OUV-0016"
+        }
+      ],
+      "tools_used": [
+        "buscar_protocolo"
+      ],
+      "handoffs": [
+        "transfer_to_ouvidoria"
+      ],
+      "trace_id": "trace_9b2cc7a59ef147d79de6fa063d03f4d8",
+      "session_id": "c574e2dc-c34f-412a-b9e2-b95c0c8aa13a"
+    },
+    {
+      "id": "G04",
+      "question": "e qual e a prioridade dele?",
+      "answer": "A prioridade do protocolo OUV-0016 é média. Posso ajudar em mais alguma coisa?",
+      "status": "PASS",
+      "errors": [],
+      "domain": "conversa",
+      "sources": [],
+      "tools_used": [],
+      "handoffs": [],
+      "trace_id": "trace_b315f59ad4ab42e5b3814d2183f8bffe",
+      "session_id": "c574e2dc-c34f-412a-b9e2-b95c0c8aa13a"
+    }
+  ],
+  "summary": {
+    "PASS": 4
+  }
+}
